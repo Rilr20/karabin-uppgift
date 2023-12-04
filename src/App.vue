@@ -1,19 +1,12 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue'
-let data = {
-  id: 123452,
-  produkt: "produkt 1 med en längre titel",
-  count: 200,
-  price: "1 308,00",
-  price2: "483,96",
-  sum: "193 508,40"
-}
+import Table from './components/Table.vue'
+
 </script>
 
 <template>
   <Header />
-  <div class="font-inter px-96 flex h-screen mt-12 ">
+  <div class="font-inter px-96 h-screen mt-12 ">
     <div class="flex justify-between w-full h-60"> <!--Two divs section-->
       <div class="w-1/2 mr-2 bg-[#005874] flex rounded-2xl"> <!--Left div-->
         <div class="w-1/3 pb-4 flex justify-center items-center">
@@ -58,17 +51,20 @@ let data = {
         </div>
       </div>
     </div>
-    <div class=""> <!--Table section-->
-      <div class=""><!--Table-->
+      <div class="flex mt-6"> <!--Table section-->
+        <div class="w-4/6 mr-2 bg-white rounded-2xl p-8"> <!--Left -->
+          <Table />
+          <div class=""><!--Information-->
 
-      </div>
-      <div class=""><!--Customer Info section-->
+          </div>
+        </div>
+        <div class="w-2/6 h-60 ml-2 bg-white rounded-2xl p-8"><!--Right-->
+          <div class=""><!--Shipping Info section-->
+          </div>
 
-      </div>
-      <div class=""><!--Information-->
 
+        </div>
       </div>
-    </div>
   </div>
 </template>
 
