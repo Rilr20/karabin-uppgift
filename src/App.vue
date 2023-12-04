@@ -10,13 +10,13 @@ library.add(faFilePdf)
 
 <template>
   <Header />
-  <div class="font-inter px-96 h-screen mt-12 ">
-    <div class="flex justify-between w-full h-60"> <!--Two divs section-->
-      <div class="w-1/2 mr-2 bg-[#005874] flex rounded-2xl"> <!--Left div-->
-        <div class="w-1/3 pb-4 flex justify-center items-center">
-          <img src="../src/assets/items.png" alt="items">
+  <div class="font-inter md:px-96 h-screen mt-12 md:overflow-x-auto overflow-x-hidden">
+    <div class="md:flex justify-between w-full h-60"> <!--Two divs section-->
+      <div class="md:w-1/2 w-fill md:mr-2 bg-[#005874] flex rounded-2xl md:mb-0 mb-8"> <!--Left div-->
+        <div class="md:w-1/3 pb-4 w-0 md:flex justify-center items-center invisible md:visible">
+          <img class="" src="../src/assets/items.png" alt="items">
         </div>
-        <div class="w-2/3 text-white">
+        <div class="md:w-2/3 w-fill md:px-0 px-8 md:pb-o pb-4 text-white">
           <p class="text-xs mt-8">Offererad summa:</p>
           <p><span class="text-3xl font-bold">1 736 550 SEK</span> exkl. moms</p>
           <div class="grid grid-rows-2 grid-flow-col gap-4 mt-8 text-xs"> <!--grid?-->
@@ -40,27 +40,30 @@ library.add(faFilePdf)
           </div>
         </div>
       </div>
-      <div class="w-1/2 ml-2 bg-gradient-to-r to-[#00B5CC] from-[#005874] rounded-2xl text-white text-xs flex">
+      <div class="md:w-1/2 w-fill md:ml-2 bg-gradient-to-r to-[#00B5CC] from-[#005874] rounded-2xl text-white text-xs flex">
         <!--Right div-->
-        <div class="p-8 font-medium w-4/6"> <!--Text-->
+        <div class="p-8 font-medium md:w-4/6 w-fill"> <!--Text-->
           <p>Hej Brian,</p>
           <br> <br>
-          <p>Tack för Er förfrågan. Om du har några frågor så kan du nå mig på 0707 - 54 54 54 eller via
-            kontaktinformationen direkt här på sidan</p>
+          <p class="md:mr-0 mr-16"><!--När texten är längre än "Tack för Er förfrågan. Om du har några frågor s" då blir det en overflow av någon anledning-->
+            Tack för Er förfrågan. Om du har några frågor så kan du nå mig på 0707 - 54 54 54 eller via
+            kontaktinformationen direkt här på sidan
+          </p>
           <br> <br>
           <p>Mvh</p>
           <p>Julius Davis</p>
           <p>Säljare Terry Inc.</p>
         </div>
-        <div class="w-2/6 bg-color[#ff22ff] static"><!--Image-->
-          <img class="relative rounded-2xl bottom-18 left-13" style="bottom:18px;left:13px;" src="../src/assets/man.png"
+        <div class="w-0 md:w-2/6 bg-color[#ff22ff] md:static invisible md:visible"><!--Image-->
+          <img class="relative rounded-2xl bottom-18 left-13 " style="bottom:18px;left:13px;" src="../src/assets/man.png"
             alt="man">
         </div>
       </div>
     </div>
-    <div class="flex mt-6"> <!--Table section-->
-      <div class="w-4/6 mr-2 rounded-2xl"> <!--Left -->
-        <div class="w-fit bg-white rounded-2xl p-8">
+
+    <div class="md:flex mt-6"> <!--Table section-->
+      <div class="md:w-4/6 w-fill md:mr-2 rounded-2xl"> <!--Left -->
+        <div class="w-fit bg-white rounded-2xl p-8 md:mt-0 mt-72">
           <Table />
         </div>
         <div class="bg-white mt-8 rounded-2xl p-8 text-[#005874]">
@@ -78,7 +81,7 @@ library.add(faFilePdf)
           </p>
         </div>
       </div>
-      <div class="w-2/6 h-fit ml-2"><!--Right-->
+      <div class="md:w-2/6 w-fill h-fit md:ml-2"><!--Right-->
         <div class="bg-white w-fill p-8 rounded-2xl">
 
 
