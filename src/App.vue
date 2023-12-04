@@ -1,7 +1,11 @@
 <script setup>
 import Header from './components/Header.vue'
 import Table from './components/Table.vue'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faFilePdf } from '@fortawesome/free-regular-svg-icons'
 
+library.add(faFilePdf)
 </script>
 
 <template>
@@ -36,35 +40,79 @@ import Table from './components/Table.vue'
           </div>
         </div>
       </div>
-      <div class="w-1/2 ml-2 bg-gradient-to-r to-[#00B5CC] from-[#005874] rounded-2xl text-white text-xs flex"> <!--Right div-->
-        <div  class="p-8 font-medium w-4/6"> <!--Text-->
+      <div class="w-1/2 ml-2 bg-gradient-to-r to-[#00B5CC] from-[#005874] rounded-2xl text-white text-xs flex">
+        <!--Right div-->
+        <div class="p-8 font-medium w-4/6"> <!--Text-->
           <p>Hej Brian,</p>
-          <br>          <br>
-          <p>Tack för Er förfrågan. Om du har några frågor så kan du nå mig på 0707 - 54 54 54 eller via kontaktinformationen direkt här på sidan</p>
-          <br>          <br>
+          <br> <br>
+          <p>Tack för Er förfrågan. Om du har några frågor så kan du nå mig på 0707 - 54 54 54 eller via
+            kontaktinformationen direkt här på sidan</p>
+          <br> <br>
           <p>Mvh</p>
           <p>Julius Davis</p>
           <p>Säljare Terry Inc.</p>
         </div>
         <div class="w-2/6 bg-color[#ff22ff] static"><!--Image-->
-          <img class="relative rounded-2xl bottom-18 left-13" style="bottom:18px;left:13px;" src="../src/assets/man.png" alt="man">
+          <img class="relative rounded-2xl bottom-18 left-13" style="bottom:18px;left:13px;" src="../src/assets/man.png"
+            alt="man">
         </div>
       </div>
     </div>
-      <div class="flex mt-6"> <!--Table section-->
-        <div class="w-4/6 mr-2 bg-white rounded-2xl p-8"> <!--Left -->
+    <div class="flex mt-6"> <!--Table section-->
+      <div class="w-4/6 mr-2 rounded-2xl"> <!--Left -->
+        <div class="w-fit bg-white rounded-2xl p-8">
           <Table />
-          <div class=""><!--Information-->
-
-          </div>
         </div>
-        <div class="w-2/6 h-60 ml-2 bg-white rounded-2xl p-8"><!--Right-->
-          <div class=""><!--Shipping Info section-->
-          </div>
-
-
+        <div class="bg-white mt-8 rounded-2xl p-8 text-[#005874]">
+          <h3 class="text-base mb-4 mt-2 font-bold">Information</h3>
+          <p class="text-xs">Quis tenetur ratione. Neque molestias doloribus suscipit. 
+            Dolor quisquam pariatur minima voluptatem. 
+            Natus eligendi nostrum odit excepturi saepe alias saepe. 
+            Vero eum illo ad hic consequuntur beatae.
+          </p>
+          <h3 class="text-base mb-4 mt-4 font-bold">Frakt</h3>
+          <p class="text-xs">Observera att frakt, pall och emballage inte ingår i priset och tillkommer. Leveranstiden för ej lagerförda material är 6-8 veckor. 
+            Vi följer gällande standarder. Offerten är giltig i 30 dagar och priset avser endast de artiklar som anges i offerten. 
+            Priserna är baserade på en överenskommen rabatt gentemot bruttoprislistan. 
+            Var vänlig kontrollera offerten noggrant då Watt inte tar ansvar för eventuella fel i produktbeskrivningen.
+          </p>
         </div>
       </div>
+      <div class="w-2/6 h-fit ml-2"><!--Right-->
+        <div class="bg-white w-fill p-8 rounded-2xl">
+
+
+          <div class="grid grid-rows-3 grid-flow-col gap-1  text-xs text-[#005874] "><!--Shipping Info section-->
+            <div class="my-2">
+              <p class="text-sm font-bold">Kundnummer</p>
+              <p>3320</p>
+            </div>
+            <div class="my-2">
+              <p class="text-sm font-bold">Er Order</p>
+              <p>Tideräkningsgatan</p>
+
+            </div>
+            <div class="my-2">
+              <p class="text-sm font-bold">Leveransvilkor</p>
+              <p>Fritt vårt lager CPT</p>
+            </div>
+            <div class="my-2">
+              <p class="text-sm font-bold">Betalningsvilkor</p>
+              <p>30 dagar</p>
+
+            </div>
+            <div class="my-2">
+              <p class="text-sm font-bold">Godsmärke</p>
+              <p>Tideräkningsgatan</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#00B5CC] text-white my-4 rounded-2xl h-14 flex justify-center items-center"> <font-awesome-icon :icon="['far', 'file-pdf']" /> Ladda ner PDF</div>
+        <div class="bg-[#005874] text-white my-4 rounded-2xl h-14 flex justify-center items-center">Godkänn offert</div>
+        <div class="bg-[#fff] text-[#F16A80] my-4 rounded-2xl h-14 flex justify-center items-center">Neka offert</div>
+      </div>
+    </div>
   </div>
 </template>
 
