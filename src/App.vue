@@ -15,14 +15,14 @@ let data = {
   <Header />
   <div class="font-inter px-96 flex h-screen mt-12 ">
     <div class="flex justify-between w-full h-60"> <!--Two divs section-->
-      <div class="bg-white w-1/2 mr-2 bg-[#005874] flex rounded-2xl"> <!--Left div-->
+      <div class="w-1/2 mr-2 bg-[#005874] flex rounded-2xl"> <!--Left div-->
         <div class="w-1/3 pb-4 flex justify-center items-center">
           <img src="../src/assets/items.png" alt="items">
         </div>
         <div class="w-2/3 text-white">
           <p class="text-xs mt-8">Offererad summa:</p>
           <p><span class="text-3xl font-bold">1 736 550 SEK</span> exkl. moms</p>
-          <div class="grid grid-rows-2 grid-flow-col gap-4 mt-8 text-xs"> <!--grid-->
+          <div class="grid grid-rows-2 grid-flow-col gap-4 mt-8 text-xs"> <!--grid?-->
             <div>
               <p class="font-bold">Offertnummer</p>
               <p>8971235</p>
