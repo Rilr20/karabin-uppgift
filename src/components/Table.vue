@@ -10,32 +10,32 @@ let data = {
 }
 </script>
 <template>
-    <table class="table-fixed w-fit font-inter"><!--Table-->
-        <thead class="text-[#005874] text-center h-14"><!--Table Header-->
-            <th class="1/6">Produktnr</th>
-            <th class="w-40 pl-4">Benämning</th>
-            <th class="1/6">Antal</th>
-            <th class="1/6">Brutto ápris</th>
-            <th class="1/6">Netto ápris</th>
-            <th class="1/6">Summa</th>
+    <table class="table-fixed w-fit font-inter md:text-medium text-xs overflow-auto-y max-height-20"><!--Table-->
+        <thead class="text-[#005874] text-center md:h-14 h-20 md:px-0 px-8"><!--Table Header-->
+            <th class="md:1/6 w-1/6">Produktnr</th>
+            <th class="md:w-40 w-20 pl-4">Benämning</th>
+            <th class="md:1/6 w-1/6">Antal</th>
+            <th class="md:1/6 w-1/6">Brutto ápris</th>
+            <th class="md:1/6 w-1/6">Netto ápris</th>
+            <th class="md:1/6 w-1/6">Summa</th>
         </thead>
-        <tbody class="text-center">
+        <tbody class="text-center sm:overflow-auto">
             <!--Table Row-->
-            <tr class="h-14 odd:bg-[#F8FDFD] even:bg-white">
-                <td class="p4 1/6">{{ data.id }}</td>
-                <td class="p4 text-left w-40 pl-4">Kort titel</td>
-                <td class="p4 1/6">{{ data.count }}</td>
-                <td class="p4 1/6">{{ data.price }}</td>
+            <tr class="md:h-14 h-20 md:px-0 px-8 odd:bg-[#F8FDFD] even:bg-white">
+                <td class="p4 md:1/6 w-1/6">{{ data.id }}</td>
+                <td class="p4 text-left md:w-40 w-20 pl-4">Kort titel</td>
+                <td class="p4 md:1/6 w-1/6">{{ data.count }}</td>
+                <td class="p4 md:1/6 w-1/6">{{ data.price }}</td>
                 <td class="p4 2/8">{{ data.price2 }}</td>
-                <td class="p4 1/6">{{ data.sum }}</td>
+                <td class="p4 md:1/6 w-1/6">{{ data.sum }}</td>
             </tr>
-            <tr class="h-14 odd:bg-[#F8FDFD] even:bg-white" v-for="n in 10">
-                <td class="p4 1/6">{{ data.id }}</td>
-                <td class="p4 text-left w-40 pl-4">{{ data.produkt }}</td>
-                <td class="p4 1/6">{{ data.count }}</td>
-                <td class="p4 1/6">{{ data.price }}</td>
-                <td class="p4 1/6">{{ data.price2 }}</td>
-                <td class="p4 1/6">{{ data.sum }}</td>
+            <tr class="md:h-14 h-20 md:px-0 px-8 odd:bg-[#F8FDFD] even:bg-white" v-for="n in 10">
+                <td class="p4 md:1/6 w-1/6">{{ data.id }}</td>
+                <td class="p4 text-left md:w-40 w-20 pl-4">{{ data.produkt }}</td>
+                <td class="p4 md:1/6 w-1/6">{{ data.count }}</td>
+                <td class="p4 md:1/6 w-1/6">{{ data.price }}</td>
+                <td class="p4 md:1/6 w-1/6">{{ data.price2 }}</td>
+                <td class="p4 md:1/6 w-1/6">{{ data.sum }}</td>
             </tr>
 
         </tbody>
