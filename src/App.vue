@@ -10,7 +10,7 @@ library.add(faFilePdf)
 
 <template>
   <Header />
-  <div class="font-inter md:px-96 h-screen mt-12 md:overflow-x-auto overflow-x-hidden">
+  <div class="font-inter md:px-96 h-screen mt-12">
     <div class="md:flex justify-between w-full h-60"> <!--Two divs section-->
       <div class="md:w-1/2 w-fill md:mr-2 bg-[#005874] flex rounded-2xl md:mb-0 mb-8"> <!--Left div-->
         <div class="md:w-1/3 pb-4 w-0 md:flex justify-center items-center invisible md:visible">
