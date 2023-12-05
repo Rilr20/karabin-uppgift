@@ -112,7 +112,7 @@ onMounted(async() => {
             </div>
             <div class="my-2">
               <p class="text-sm font-bold">Leveransvilkor</p>
-              <p>Fritt vårt lager CPT</p>
+              <p>{{data.value.quote.meta.delivery_terms}}</p>
             </div>
             <div class="my-2">
               <p class="text-sm font-bold">Betalningsvilkor</p>
