@@ -20,7 +20,7 @@ const props = defineProps({
             <tr class="md:h-14 h-20 md:px-0 px-8 odd:bg-[#F8FDFD] even:bg-white" v-for="row in data">
                 <td class="p4 md:1/6 w-1/6">{{ row.id }}</td>
                 <td class="p4 text-left md:w-40 w-20 pl-4">{{ row.description }}</td>
-                <td class="p4 md:1/6 w-1/6">{{ row.ordered_amount }}</td>
+                <td class="p4 md:1/6 w-1/6">{{ row.ordered_amount +" "+ row.unit }}</td>
                 <td class="p4 md:1/6 w-1/6">{{ row.price }}</td>
                 <td class="p4 md:1/6 w-1/6">{{ row.price2 }}</td>
                 <td class="p4 md:1/6 w-1/6">{{ row.sum }}</td>
