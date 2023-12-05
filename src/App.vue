@@ -1,4 +1,5 @@
 <script setup>
+import { ref, onMounted, reactive } from 'vue';
 import Header from './components/Header.vue'
 import Table from './components/Table.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -6,11 +7,25 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons'
 
 library.add(faFilePdf)
+
+const api = "https://karabin.se/api/task"
+let data = reactive({ value: null });
+let quote_date=""
+let formatted_date= ref("");
+
+onMounted(async() => {
+  const response = await fetch(api);
+  data.value = await response.json(); 
+  quote_date = new Date(data.value.quote.quote_date);
+  formatted_date.value = quote_date.toLocaleDateString('sv-SE');
+  console.log(data.value);
+});
+
 </script>
 
 <template>
   <Header />
-  <div class="max-w-screen-lg md:mx-auto font-inter md:px-16 h-screen mt-12 mx-1">
+  <div v-if="data.value !== null" class="max-w-screen-lg md:mx-auto font-inter md:px-16 h-screen mt-12 mx-1">
     <div class="md:flex justify-between w-full h-60"> <!--Two divs section-->
       <div class="md:w-1/2 w-fill md:mr-2 bg-[#005874] flex rounded-2xl md:mb-0 mb-8"> <!--Left div-->
         <div class="md:w-1/3 pb-4 w-0 md:flex justify-center items-center invisible md:visible">
@@ -18,24 +33,24 @@ library.add(faFilePdf)
         </div>
         <div class="md:w-2/3 w-fill md:px-0 px-8 md:pb-o pb-4 text-white">
           <p class="text-xs mt-8">Offererad summa:</p>
-          <p><span class="text-3xl font-bold">1 736 550 SEK</span> exkl. moms</p>
+          <p><span class="text-3xl font-bold">{{ data.value.quote.total_amount.toLocaleString('sv-SE') }} SEK</span> exkl. moms</p>
           <div class="grid grid-rows-2 grid-flow-col gap-4 mt-8 text-xs"> <!--grid?-->
             <div>
               <p class="font-bold">Offertnummer</p>
-              <p>8971235</p>
+              <p>{{data.value.quote.system_quote_id}}</p>
             </div>
 
             <div>
               <p class="font-bold">Vår referens</p>
-              <p>Brian Kilback</p>
+              <p>{{data.value.seller.name}}</p>
             </div>
             <div>
               <p class="font-bold">Offertdatum</p>
-              <p>2023-12-04</p>
+              <p>{{ formatted_date }}</p>
             </div>
             <div>
               <p class="font-bold">Er referens</p>
-              <p>Marcus Andersson</p>
+              <p>{{ data.value.customer.customer_reference }}</p>
             </div>
           </div>
         </div>
@@ -64,7 +79,7 @@ library.add(faFilePdf)
     <div class="md:flex mt-6"> <!--Table section-->
       <div class="md:w-4/6 w-fill md:mr-2 rounded-2xl"> <!--Left -->
         <div class="w-fit bg-white rounded-2xl p-8 md:mt-0 mt-72">
-          <Table />
+          <Table :data="data.value.rows" />
         </div>
         <div class="bg-white mt-8 rounded-2xl p-8 text-[#005874]">
           <h3 class="text-base mb-4 mt-2 font-bold">Information</h3>
@@ -88,11 +103,11 @@ library.add(faFilePdf)
           <div class="grid grid-rows-3 grid-flow-col gap-1  text-xs text-[#005874] "><!--Shipping Info section-->
             <div class="my-2">
               <p class="text-sm font-bold">Kundnummer</p>
-              <p>3320</p>
+              <p>{{data.value.customer.customer_number}}</p>
             </div>
             <div class="my-2">
               <p class="text-sm font-bold">Er Order</p>
-              <p>Tideräkningsgatan</p>
+              <p>{{data.value.customer.postal_address }}</p>
 
             </div>
             <div class="my-2">
@@ -106,7 +121,7 @@ library.add(faFilePdf)
             </div>
             <div class="my-2">
               <p class="text-sm font-bold">Godsmärke</p>
-              <p>Tideräkningsgatan</p>
+              <p>{{data.value.customer.delivery_address }}</p>
             </div>
           </div>
         </div>
