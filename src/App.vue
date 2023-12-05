@@ -126,9 +126,9 @@ onMounted(async() => {
           </div>
         </div>
 
-        <div class="bg-[#00B5CC] text-white my-6 rounded-2xl h-14 flex justify-center items-center"> <font-awesome-icon :icon="['far', 'file-pdf']" /> Ladda ner PDF</div>
-        <div class="bg-[#005874] text-white my-6 rounded-2xl h-14 flex justify-center items-center">Godkänn offert</div>
-        <div class="bg-[#fff] text-[#F16A80] my-6 rounded-2xl h-14 flex justify-center items-center">Neka offert</div>
+        <div class="bg-[#00B5CC] text-white my-5 rounded-2xl h-14 flex justify-center items-center"> <font-awesome-icon :icon="['far', 'file-pdf']" /> Ladda ner PDF</div>
+        <div class="bg-[#005874] text-white my-5 rounded-2xl h-14 flex justify-center items-center">Godkänn offert</div>
+        <div class="bg-[#fff] text-[#F16A80] my-5 rounded-2xl h-14 flex justify-center items-center">Neka offert</div>
       </div>
     </div>
   </div>
