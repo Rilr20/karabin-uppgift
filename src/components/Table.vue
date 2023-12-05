@@ -10,7 +10,7 @@ let data = {
 }
 </script>
 <template>
-    <table class="table-fixed w-fit font-inter md:text-medium text-xs overflow-x max-height-20"><!--Table-->
+    <table class="table-fixed w-full font-inter md:text-medium text-xs overflow-x"><!--Table-->
         <thead class="text-[#005874] text-center md:h-14 h-20 md:px-0 px-8"><!--Table Header-->
             <th class="md:1/6 w-1/6">Produktnr</th>
             <th class="md:w-40 w-20 pl-4">Benämning</th>
