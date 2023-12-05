@@ -10,7 +10,7 @@ library.add(faFilePdf)
 
 <template>
   <Header />
-  <div class="font-inter 2xl:px-96 md:px-16 h-screen mt-12 md:mx-0 mx-1">
+  <div class="max-w-screen-lg md:mx-auto font-inter md:px-16 h-screen mt-12 mx-1">
     <div class="md:flex justify-between w-full h-60"> <!--Two divs section-->
       <div class="md:w-1/2 w-fill md:mr-2 bg-[#005874] flex rounded-2xl md:mb-0 mb-8"> <!--Left div-->
         <div class="md:w-1/3 pb-4 w-0 md:flex justify-center items-center invisible md:visible">
@@ -55,7 +55,7 @@ library.add(faFilePdf)
           <p>Säljare Terry Inc.</p>
         </div>
         <div class="w-0 md:w-2/6 bg-color[#ff22ff] md:static invisible md:visible"><!--Image-->
-          <img class="relative rounded-2xl bottom-18 left-13 " style="bottom:18px;left:13px;" src="../src/assets/man.png"
+          <img class="relative rounded-2xl" src="../src/assets/man.png"
             alt="man">
         </div>
       </div>
