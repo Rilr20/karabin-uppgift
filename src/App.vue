@@ -32,9 +32,9 @@ onMounted(async() => {
           <img class="" :src="data.value.variantImage.thumbnailUrl" alt="items">
         </div>
         <div class="md:w-2/3 w-fill md:px-0 px-8 md:pb-o pb-4 text-white">
-          <p class="text-xs mt-8">Offererad summa:</p>
+          <p class="text-sm mt-8">Offererad summa:</p>
           <p><span class="text-3xl font-bold">{{ data.value.quote.total_amount.toLocaleString('sv-SE') }} SEK</span> exkl. moms</p>
-          <div class="grid grid-rows-2 grid-flow-col gap-4 mt-8 text-xs"> <!--grid?-->
+          <div class="grid grid-rows-2 grid-flow-col gap-4 mt-8 text-sm"> <!--grid?-->
             <div>
               <p class="font-bold">Offertnummer</p>
               <p>{{data.value.quote.system_quote_id}}</p>
@@ -83,13 +83,13 @@ onMounted(async() => {
         </div>
         <div class="bg-white mt-8 rounded-2xl p-8 text-[#005874]">
           <h3 class="text-base mb-4 mt-2 font-bold">Information</h3>
-          <p class="text-xs">Quis tenetur ratione. Neque molestias doloribus suscipit. 
+          <p class="text-sm">Quis tenetur ratione. Neque molestias doloribus suscipit. 
             Dolor quisquam pariatur minima voluptatem. 
             Natus eligendi nostrum odit excepturi saepe alias saepe. 
             Vero eum illo ad hic consequuntur beatae.
           </p>
           <h3 class="text-base mb-4 mt-4 font-bold">Frakt</h3>
-          <p class="text-xs">Observera att frakt, pall och emballage inte ingår i priset och tillkommer. Leveranstiden för ej lagerförda material är 6-8 veckor. 
+          <p class="text-sm">Observera att frakt, pall och emballage inte ingår i priset och tillkommer. Leveranstiden för ej lagerförda material är 6-8 veckor. 
             Vi följer gällande standarder. Offerten är giltig i 30 dagar och priset avser endast de artiklar som anges i offerten. 
             Priserna är baserade på en överenskommen rabatt gentemot bruttoprislistan. 
             Var vänlig kontrollera offerten noggrant då Watt inte tar ansvar för eventuella fel i produktbeskrivningen.
